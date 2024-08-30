@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(135deg, #1c92d2, #f2fcfe); 
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    background: white;
+    border-radius: 15px;
+    height: 500px auto;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-container h1 {
+    text-align: center;  
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.inner-div {
+    font-size: 18px;
+    color: #555;
+}
+
+.inner-div input {
+    width: calc(100% - 20px); 
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.inner-div input:focus {
+    border-color: #1c92d2;
+    box-shadow: 0 0 5px rgba(28, 146, 210, 0.5);
+}
+
+#signup-btn, #existing {
+    margin-top: 20px;
+    width: 40%;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background: #1c92d2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s ease;
+}
+
+#signup-btn:hover, #existing:hover {
+    background: #155a8a;
+}
+
+#existing {
+    background: #ff6347; 
+    margin-left: 0; 
+}
+
+#existing:hover {
+    background: #c44b36; 
+}
+
+/* Tooltip styles */
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Position above the input */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.email-container input:hover + .tooltip,
+.email-container input:focus + .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
